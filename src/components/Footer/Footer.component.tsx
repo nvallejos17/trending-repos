@@ -4,13 +4,13 @@ const Footer = () => (
   <FooterWrapper>
     <FooterContainer>
       <p>
-        Made with &#10084; for{' '}
+        Made with &#10084; by{' '}
         <a
-          href="https://www.shop-apotheke.com/"
+          href="https://github.com/nvallejos17"
           target="_blank"
           rel="noreferrer"
         >
-          Shop Apotheke
+          @nvallejos17
         </a>
         .
       </p>
