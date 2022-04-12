@@ -1,9 +1,17 @@
+import IPrimitiveProps from '../../types/IPrimitiveProps.type'
 import Container from '../Container/Container.component'
-import { SectionWrapper } from './Section.styled'
+import { SectionTitle, SectionWrapper } from './Section.styled'
 
-const Section = ({ children }: any) => (
+interface ISectionProps extends IPrimitiveProps {
+  title?: string
+}
+
+const Section = ({ title, children }: ISectionProps) => (
   <SectionWrapper>
-    <Container>{children}</Container>
+    <Container>
+      {title && <SectionTitle>{title}</SectionTitle>}
+      {children}
+    </Container>
   </SectionWrapper>
 )
 

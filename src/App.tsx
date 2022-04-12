@@ -9,7 +9,7 @@ const App = () => {
 
   return (
     <>
-      <Section>
+      <Section title="Trending repositories">
         <Repos repos={repos} />
       </Section>
       <Footer />

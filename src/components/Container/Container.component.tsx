@@ -1,6 +1,9 @@
+import IPrimitiveProps from '../../types/IPrimitiveProps.type'
 import { ContainerWrapper } from './Container.styled'
 
-const Container = ({ children, ...props }: any) => (
+type IContainerProps = IPrimitiveProps
+
+const Container = ({ children, ...props }: IContainerProps) => (
   <ContainerWrapper {...props}>{children}</ContainerWrapper>
 )
 
