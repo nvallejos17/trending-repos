@@ -1,5 +1,5 @@
-import { ButtonWrapper } from './Button.styled'
 import IPrimitiveProps from '../../types/IPrimitiveProps.type'
+import { ButtonWrapper } from './Button.styled'
 
 type IButtonProps = IPrimitiveProps
 
