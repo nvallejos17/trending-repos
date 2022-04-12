@@ -3,13 +3,15 @@ import { ReposContext, ReposContextType } from './contexts/ReposContext.context'
 import Section from './components/Section/Section.component'
 import Repos from './components/Repos/Repos.component'
 import Footer from './components/Footer/Footer.component'
+import Navbar from './components/Navbar/Navbar.component'
 
 const App = () => {
   const { repos } = useContext(ReposContext) as ReposContextType
 
   return (
     <>
-      <Section title="Trending repositories">
+      <Navbar />
+      <Section title="Trending">
         <Repos repos={repos} />
       </Section>
       <Footer />
