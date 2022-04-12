@@ -12,7 +12,6 @@ const Footer = () => (
         >
           @nvallejos17
         </a>
-        .
       </p>
     </FooterContainer>
   </FooterWrapper>
