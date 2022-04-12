@@ -3,7 +3,7 @@ interface IRepo {
   name: string
   url: string
   description: string
-  stars_count: string
+  stars_count: number
   starred: boolean
 }
 

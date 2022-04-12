@@ -40,7 +40,15 @@ const ReposContextProvider = ({ children }: any) => {
 
   const starUnstarRepo = (repoId: number) => {
     const udpatedRepos = repos.map((repo) =>
-      repo.id === repoId ? { ...repo, starred: !repo.starred } : repo
+      repo.id === repoId
+        ? {
+            ...repo,
+            stars_count: repo.starred
+              ? repo.stars_count - 1
+              : repo.stars_count + 1,
+            starred: !repo.starred,
+          }
+        : repo
     )
 
     setRepos(udpatedRepos)
