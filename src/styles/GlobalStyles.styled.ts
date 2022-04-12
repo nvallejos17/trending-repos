@@ -1,7 +1,7 @@
 import { createGlobalStyle, css } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle(
-  () => css`
+  ({ theme }: any) => css`
     * {
       margin: 0;
       padding: 0;
@@ -19,6 +19,8 @@ const GlobalStyles = createGlobalStyle(
 
     body {
       font-family: 'Nunito', sans-serif;
+      color: ${theme.colors.fontDefault};
+      background: ${theme.colors.bgDefault};
     }
 
     a {

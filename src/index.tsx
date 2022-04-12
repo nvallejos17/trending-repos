@@ -1,15 +1,19 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import ReposContextProvider from './contexts/ReposContext.context'
-import GlobalStyles from './styles/GlobalStyles.styled'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
+import ReposContextProvider from './contexts/ReposContext.context'
+import { ThemeProvider } from 'styled-components'
+import theme from './styles/theme'
+import GlobalStyles from './styles/GlobalStyles.styled'
 
 ReactDOM.render(
   <React.StrictMode>
     <ReposContextProvider>
-      <GlobalStyles />
-      <App />
+      <ThemeProvider theme={theme}>
+        <GlobalStyles />
+        <App />
+      </ThemeProvider>
     </ReposContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
