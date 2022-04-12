@@ -1,20 +1,23 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './App'
 import reportWebVitals from './reportWebVitals'
+import { BrowserRouter } from 'react-router-dom'
 import ReposContextProvider from './contexts/ReposContext.context'
 import { ThemeProvider } from 'styled-components'
 import theme from './styles/theme'
 import GlobalStyles from './styles/GlobalStyles.styled'
+import App from './App'
 
 ReactDOM.render(
   <React.StrictMode>
-    <ReposContextProvider>
-      <ThemeProvider theme={theme}>
-        <GlobalStyles />
-        <App />
-      </ThemeProvider>
-    </ReposContextProvider>
+    <BrowserRouter>
+      <ReposContextProvider>
+        <ThemeProvider theme={theme}>
+          <GlobalStyles />
+          <App />
+        </ThemeProvider>
+      </ReposContextProvider>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 )

@@ -1,15 +1,16 @@
 import { NavbarWrapper, NavbarContainer } from './Navbar.styled'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => (
   <NavbarWrapper>
     <NavbarContainer>
-      <a href="/">GitHub Repos</a>
+      <Link to="/">GitHub Repos</Link>
       <ul>
         <li>
-          <a href="/">Trending</a>
+          <Link to="/">Trending</Link>
         </li>
         <li>
-          <a href="/starred">Starred</a>
+          <Link to="/starred">Starred</Link>
         </li>
       </ul>
     </NavbarContainer>
